@@ -1,6 +1,6 @@
 # Advanced Angular Components - Presentation Example Application
 
-This project contained the examples for VS Live Chicago - Designing and Building Advanced Angular Components
+This project contains examples for VS Live Chicago Presentation - Designing and Building Advanced Angular Components
 
 ## Setup
 
