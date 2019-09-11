@@ -1,0 +1,23 @@
+
+
+
+
+.site-item-class {
+    float: left;
+    width: 30%;
+    padding: 15px;
+    border: 2px solid green;
+    margin: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
+}
+
+
+.site-item-class:hover {
+    border: 2px solid blue;
+    box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
+}

@@ -1,0 +1,7 @@
+<h1>Component Life Cycle Demo</h1>
+
+<p>Trigger Change checking: <input type="text" [(ngModel)]="message"></p>
+
+<button class="btn btn-success" (click)="lifeCycle.clearEvents()">Clear Events</button>
+
+<app-life-cycle [message]="message" #lifeCycle></app-life-cycle>

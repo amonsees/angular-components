@@ -1,0 +1,50 @@
+<h1>Component Input Test</h1>
+
+
+<label><input type="radio" value="inputInvalidBindings" [(ngModel)]="selectedItem"> Invalid Bindings</label><br>
+<label><input type="radio" value="inputProtectedBindings" [(ngModel)]="selectedItem"> Protected  Bindings</label><br>
+<label><input type="radio" value="inputCleanerProtectedBindings" [(ngModel)]="selectedItem"> Cleaner Protected  Bindings</label><br>
+
+<div [ngSwitch]="selectedItem">
+ 
+  
+  <ng-container *ngSwitchCase="'inputInvalidBindings'">
+
+    <h3>Angular binding invalid data</h3>
+
+    <p>
+      [stringValue]="invalidStringValue" [numberValue]="invalidNumberValue" [booleanValue]="invalidBooleanValue"
+    </p>
+
+    <app-input-only [stringValue]="invalidStringValue" [numberValue]="invalidNumberValue"
+      [booleanValue]="invalidBooleanValue">
+    </app-input-only>
+  </ng-container>
+
+
+  <ng-container *ngSwitchCase="'inputProtectedBindings'">
+    <h3>Angular bindings with defensive countermeasures</h3>
+
+    <p>
+      [stringValue]="invalidStringValue" [numberValue]="invalidNumberValue" [booleanValue]="invalidBooleanValue"
+    </p>
+
+    <app-protected-input-only [stringValue]="invalidStringValue" [numberValue]="invalidNumberValue"
+      [booleanValue]="invalidBooleanValue">
+    </app-protected-input-only>
+  </ng-container>
+
+
+  <ng-container *ngSwitchCase="'inputCleanerProtectedBindings'">
+    <h3>Angular bindings with defensive countermeasures (Cleaner version)</h3>
+
+    <p>
+      [stringValue]="invalidStringValue" [numberValue]="invalidNumberValue" [booleanValue]="invalidBooleanValue"
+    </p>
+
+    <app-cleaner-protected-input-only [stringValue]="invalidStringValue" [numberValue]="invalidNumberValue"
+      [booleanValue]="invalidBooleanValue">
+    </app-cleaner-protected-input-only>
+  </ng-container>
+  
+</div>

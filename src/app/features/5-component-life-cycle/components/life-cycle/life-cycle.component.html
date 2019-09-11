@@ -1,0 +1,10 @@
+
+<p>Parent Message : {{message}}</p>
+<div class="row" *ngFor="let event of events">
+  <div class="col-md-4">
+    <h3>{{event.eventName}}</h3>
+  </div>
+  <div class="col-md-2">
+    <span class="badge badge-pill badge-primary">{{event.count}}</span>
+  </div>
+</div>

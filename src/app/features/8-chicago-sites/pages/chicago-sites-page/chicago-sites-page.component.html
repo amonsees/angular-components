@@ -1,0 +1,16 @@
+
+<div *ngIf="!routerOutlet.isActivated">
+    <h1>Chicago Sites</h1>
+
+    <app-data-list [dataItems]="sites$ | async" (selectItem)="selectSite($event)" itemClass="site-item-class">
+        <ng-container *dataItem="let site">
+            <app-chicago-site [site]="site"></app-chicago-site>
+        </ng-container>
+    </app-data-list>
+
+    <a routerLink="add">
+        <button class="btn btn-success">Add Site</button>
+    </a>
+</div>
+
+<router-outlet></router-outlet>

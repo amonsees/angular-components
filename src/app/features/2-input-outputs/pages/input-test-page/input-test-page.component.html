@@ -1,0 +1,66 @@
+<h1>Component Input Test</h1>
+
+<label><input type="radio" value="inputAngularBinding" [(ngModel)]="selectedItem"> Attribute Binding</label><br>
+<label><input type="radio" value="inputAttributeOnly" [(ngModel)]="selectedItem"> Attribute Only</label><br>
+
+
+<label><input type="radio" value="inputUpdateValue" [(ngModel)]="selectedItem" *ngIf="false"> Attribute Binding with Changes</label><br>
+
+<div [ngSwitch]="selectedItem">
+  <ng-container *ngSwitchCase="'inputAngularBinding'">
+
+    <h3>Attribute binding with []</h3>
+
+    <p>
+      [stringValue]="stringValue" [numberValue]="numberValue" [booleanValue]="booleanValue"
+    </p>
+
+    <app-input-only [stringValue]="stringValue" [numberValue]="numberValue" [booleanValue]="booleanValue">
+    </app-input-only>
+
+  </ng-container>
+  
+  <ng-container *ngSwitchCase="'inputAttributeOnly'">
+
+    <h3>Angular binding without []</h3>
+
+    <p>
+      stringValue="This is a string" numberValue="45" booleanValue="false"
+    </p>
+
+    <app-input-only stringValue="This is a string" numberValue="45" booleanValue="false">
+    </app-input-only>
+
+  </ng-container>
+  
+  <ng-container *ngSwitchCase="'inputUpdateValue'">
+    <h3>Attribute binding with changes</h3>
+
+    <p>
+      [stringValue]="stringValue" [numberValue]="numberValue" [booleanValue]="booleanValue"
+    </p>
+
+    <div class="row">
+      <div class="col-md-3">
+        <label>String Value</label>
+        <input type="input" [(ngModel)]="stringValue" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <label>Number Value</label>
+        <input type="input" [(ngModel)]="numberValue" appNumeric class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <label>Number Value</label>
+        <input type="checkbox" [(ngModel)]="booleanValue" class="form-control">
+      </div>
+    </div>
+
+    <app-cleaner-protected-input-only [stringValue]="stringValue" [numberValue]="numberValue"
+      [booleanValue]="booleanValue" showChanges="true">
+    </app-cleaner-protected-input-only>
+  </ng-container>
+</div>

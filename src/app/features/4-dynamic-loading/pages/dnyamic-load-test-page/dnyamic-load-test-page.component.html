@@ -1,0 +1,20 @@
+<h1>
+  Dynamic Component Loading
+</h1>
+<p>
+  Component:
+  <select [(ngModel)]="selectedComponent">
+    <option *ngFor="let item of componentList" [ngValue]="item.component">
+      {{ item.display }}
+    </option>
+  </select>
+
+  Color:
+  <select [(ngModel)]="selectedColor" (ngModelChange)="setComponentColor()">
+    <option *ngFor="let color of colorList" [ngValue]="color">
+      {{ color }}
+    </option>
+  </select>
+</p>
+
+<app-dynamic-loader [component]="selectedComponent" (configure)="configureComponent($event)"></app-dynamic-loader>

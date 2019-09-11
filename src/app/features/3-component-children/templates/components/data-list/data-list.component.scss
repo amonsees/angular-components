@@ -1,0 +1,17 @@
+
+
+.item-class {
+    float: left;
+    width: 30%;
+    padding: 15px;
+    border: 2px solid black;
+    margin:4px;
+
+    cursor: pointer;
+}
+
+
+.item-class:hover {
+    border: 2px solid blue;
+    box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
+}

@@ -1,0 +1,26 @@
+
+<ng-container *ngIf="routerOutlet.isActivated">
+  <a [routerLink]="currentUrl" class="m-1">
+    <button class="btn-sm btn-success">
+      {{ routeConfig?.data?.breadCrumb || routeConfig?.data?.display || 'Home' }} 
+    </button>
+  </a>
+</ng-container>
+
+
+<ng-container *ngIf="!routerOutlet.isActivated">
+
+  <ng-content></ng-content>
+
+  <h1>{{display}}</h1>
+
+  <p>{{description}}</p>
+
+  <ul>
+    <li *ngFor="let route of routes">
+      <h2><a [routerLink]="route.path">{{ route?.data?.display }}</a></h2>  
+    </li>
+  </ul>
+</ng-container>
+
+<router-outlet #router2></router-outlet>

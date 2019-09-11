@@ -1,0 +1,17 @@
+<h1>Content Child Test</h1>
+
+<label><input type="radio" value="contentChild" [(ngModel)]="selectedItem"> Content Child </label><br>
+<label><input type="radio" value="contentChildren" [(ngModel)]="selectedItem"> Content Children </label><br>
+
+<button class="btn btn-success" (click)="showChild = !showChild"> {{ showChild ? 'Hide' : 'Show' }} First Item</button>
+
+<app-parent *ngIf="selectedItem === 'contentChild'">
+  <app-child name="Item 1" *ngIf="showChild"></app-child>
+  <app-child name="Item 2"></app-child>
+</app-parent>
+
+<app-parent-multi-child *ngIf="selectedItem === 'contentChildren'">
+  <app-child name="Item 1" *ngIf="showChild"></app-child>
+  <app-child name="Item 2"></app-child>
+  <app-child name="Item 3"></app-child>
+</app-parent-multi-child>

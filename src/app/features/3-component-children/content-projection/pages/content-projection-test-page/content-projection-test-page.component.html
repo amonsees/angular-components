@@ -1,0 +1,35 @@
+<h1>Content Projection Test</h1>
+
+<label><input type="radio" value="singleContent" [(ngModel)]="selectedItem"> Basic</label><br>
+<label><input type="radio" value="multiContent" [(ngModel)]="selectedItem"> Multiple content areas</label><br>
+
+<div [ngSwitch]="selectedItem">
+  <ng-container *ngSwitchCase="'singleContent'">
+
+    <h3>Basic Content</h3>
+
+    <app-simple-content>
+      This is some simple content
+    </app-simple-content>
+  </ng-container>
+
+
+  <ng-container *ngSwitchCase="'multiContent'">
+    <h3>Multiple Content Areas</h3>
+
+      <app-container>
+        <div header>
+          <span class="custom-title">Template</span> Header
+        </div>
+        <div body>
+          This is the container body<br>
+          This is the container body<br>
+          This is the container body<br>
+          This is the container body<br>
+          This is the container body<br>
+          This is the container body<br>
+        </div>
+      </app-container>
+
+  </ng-container>
+</div>

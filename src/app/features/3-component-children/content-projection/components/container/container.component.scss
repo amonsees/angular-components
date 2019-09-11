@@ -1,0 +1,29 @@
+
+ .container {
+    width: 100%;
+    max-width: 100%;
+    display: inline-block;
+    border-radius: 5px;
+    background: #666666;
+    margin-bottom: 2px;
+    padding: 4px;
+    box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
+}
+
+.container-body {
+    padding: 9px;
+    background-color:white;
+    overflow:hidden;
+    width:100%;
+    border-radius: 5px;
+    min-height:50px;
+}
+
+.container-header {
+    font-size: larger;
+    font-weight:bold;
+    width:100%;
+    background: #666666;
+    color:white;
+    padding:2px;
+}
