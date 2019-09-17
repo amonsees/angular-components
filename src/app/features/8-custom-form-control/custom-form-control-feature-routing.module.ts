@@ -4,23 +4,13 @@ import { MenuPageComponent } from 'src/app/shared/pages/menu-page/menu-page.comp
 import { CustomFormControlTestPageComponent } from './pages/custom-form-control-test-page/custom-form-control-test-page.component';
 
 const featureRoutes: Route[] = [
-    {
-        path : '',
-        component: MenuPageComponent,
-        data: {
-            display: 'Custom Form Controls',
-            description: ''
-        },
-        children: [
-            {
-                path : 'custom-control',
-                component: CustomFormControlTestPageComponent,
-                data: {
-                    display: 'Pills Select Example'
-                }
-            }
-        ]
+  {
+    path : '',
+    component: CustomFormControlTestPageComponent,
+    data: {
+        display: 'Pills Select Example'
     }
+  }
 ];
 
 @NgModule({

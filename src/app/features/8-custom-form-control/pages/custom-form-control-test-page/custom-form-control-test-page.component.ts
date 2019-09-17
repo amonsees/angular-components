@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerStatus } from 'src/app/features/6-angular-forms/template-forms/models/customer.status.enum';
 
 @Component({
   selector: 'app-custom-form-control-test-page',

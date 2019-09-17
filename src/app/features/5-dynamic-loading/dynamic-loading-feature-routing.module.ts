@@ -4,23 +4,13 @@ import { MenuPageComponent } from 'src/app/shared/pages/menu-page/menu-page.comp
 import { DnyamicLoadTestPageComponent } from './pages/dnyamic-load-test-page/dnyamic-load-test-page.component';
 
 const componentRoutes: Route[] = [
-    {
-        path : '',
-        component: MenuPageComponent,
-        data: {
-            display: 'Dynamic Component Instantiation',
-            description: ''
-        },
-        children: [
-            {
-                path : 'dynamic-loader',
-                component: DnyamicLoadTestPageComponent,
-                data: {
-                    display: 'Dynamic Component Example'
-                }
-            }
-        ]
-    }
+  {
+    path : '',
+    component: DnyamicLoadTestPageComponent,
+    data: {
+        display: 'Dynamic Component Example'
+    } 
+  }
 ];
 
 @NgModule({

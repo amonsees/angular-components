@@ -22,6 +22,11 @@ export class ReactiveFormTestPageComponent implements OnInit {
     this.customerFG = new FormGroup({
       name: new FormControl(null, Validators.required),
     });
+
+
+    this.customerFG.valueChanges.subscribe((value) => {
+        
+    });
   }
 
   onSubmit() {

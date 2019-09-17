@@ -4,23 +4,13 @@ import { MenuPageComponent } from 'src/app/shared/pages/menu-page/menu-page.comp
 import { LifeCycleTestPageComponent } from './pages/life-cycle-test-page/life-cycle-test-page.component';
 
 const featureRoutes: Route[] = [
-    {
-        path : '',
-        component: MenuPageComponent,
-        data: {
-            display: 'Component Life Cycle',
-            description: ''
-        },
-        children: [
-            {
-                path : 'lifecycle-example',
-                component: LifeCycleTestPageComponent,
-                data: {
-                    display: 'Component Life Cycle Example'
-                }
-            }
-        ]
+  {
+    path : '',
+    component: LifeCycleTestPageComponent,
+    data: {
+        display: 'Component Life Cycle Example'
     }
+  }
 ];
 
 @NgModule({
