@@ -9,7 +9,7 @@ import { TriangleComponent } from '../../components/shapes/triangle/triangle.com
   selector: 'app-dnyamic-load-test-page',
   templateUrl: './dnyamic-load-test-page.component.html',
 })
-export class DnyamicLoadTestPageComponent implements OnInit {
+export class DnyamicLoadTestPageComponent {
 
   selectedComponent: Type<any> = CircleComponent;
   selectedColor = 'blue';
@@ -36,11 +36,6 @@ export class DnyamicLoadTestPageComponent implements OnInit {
     'green',
     'blue',
   ];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   configureComponent(component: ShapeBaseComponent) {
     this.componentInstance = component;

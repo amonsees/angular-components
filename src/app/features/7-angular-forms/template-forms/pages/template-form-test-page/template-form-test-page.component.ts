@@ -15,9 +15,7 @@ export class TemplateFormTestPageComponent {
 
   @ViewChild(NgForm) form: NgForm;
 
-  onSubmit(form: any) {
-    console.log('form', form, this.form);
-
+  onSubmit() {
     if (this.form.valid) {
       this.submittedValue = this.name
     }
