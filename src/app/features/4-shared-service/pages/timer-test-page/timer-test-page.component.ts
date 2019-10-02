@@ -13,7 +13,6 @@ import { TimerService } from '../../services/timer.service';
       <button (click)="timerService.startTimer()" class="btn btn-success">Start</button>
       <button (click)="timerService.stopTimer()" class="btn btn-success">Stop</button>
       <button (click)="timerService.resetTimer()" class="btn btn-success">Reset</button>
-  
 
       <br>
       <h2>Independant Timer</h2>

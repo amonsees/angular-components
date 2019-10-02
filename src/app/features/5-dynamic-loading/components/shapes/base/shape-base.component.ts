@@ -1,6 +1,6 @@
 import { Input, OnChanges, SimpleChanges, OnInit } from '@angular/core';
 
-export class ShapeBaseComponent implements OnInit, OnChanges {
+export abstract class ShapeBaseComponent implements OnInit, OnChanges {
     private _color = 'green';
 
     @Input()
@@ -19,8 +19,6 @@ export class ShapeBaseComponent implements OnInit, OnChanges {
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        console.log('ShapeBaseComponent.ngOnChanges', changes);
-
         if (changes.color) {
             this.setupStyle();
         }

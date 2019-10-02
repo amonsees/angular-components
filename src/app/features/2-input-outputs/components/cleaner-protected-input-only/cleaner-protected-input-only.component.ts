@@ -4,7 +4,7 @@ import { InputConverter } from '../../functions/input.converter.decorator';
 
 @Component({
   selector: 'app-cleaner-protected-input-only',
-  template:`
+  template: `
   <div class="child-control">
     String Value : {{ stringValue }} - Type {{ getType(stringValue) }} <i *ngIf="stringChanged" class="fa fa-check">Changed</i><br>
     Number Value : {{ numberValue }} - Type {{ getType(numberValue) }} <i *ngIf="numberChanged" class="fa fa-check">Changed</i><br>

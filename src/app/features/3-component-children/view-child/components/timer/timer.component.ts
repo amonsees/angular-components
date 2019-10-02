@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div class="child-control">
       Timer: {{ timerValue | number : '1.1-1' }}
-   </div>`
+    </div>`
 })
 export class TimerComponent {
   timerValue = 0;

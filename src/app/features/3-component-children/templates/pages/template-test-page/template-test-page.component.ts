@@ -11,7 +11,7 @@ import { DataItem } from '../../models/data-item.model';
       <ng-container *dataItem="let item">
           <b>{{ item.title }}</b>
       </ng-container>
-      
+
   </app-data-list>
 
   <div *ngIf="selectedItem">

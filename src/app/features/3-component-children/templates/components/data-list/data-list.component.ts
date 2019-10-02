@@ -9,7 +9,7 @@ import { DataItemDirective } from '../../directives/data-item.directive';
         <div *ngFor="let dataItem of dataItems" (click)="dataItemClick(dataItem)" [class]="itemClass">
 
             <ng-container *ngTemplateOutlet="dataItemTemplate; context : {$implicit: dataItem}"></ng-container>
-            
+
         </div>
     </div>`,
   styleUrls: ['./data-list.component.scss']

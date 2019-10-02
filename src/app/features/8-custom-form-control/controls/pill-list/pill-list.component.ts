@@ -4,14 +4,17 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 @Component({
   selector: 'app-pill-list',
   template: `
-    <span *ngFor="let item of items" class="badge" [ngClass]="{ 'badge-primary': getItemValue(item)===value, 'badge-secondary': getItemValue(item)!==value }" (click)="changeValue(item)">
+    <span *ngFor="let item of items" class="badge"
+      [ngClass]="{ 'badge-primary': getItemValue(item)===value, 'badge-secondary': getItemValue(item)!==value }"
+      (click)="changeValue(item)">
       {{ getItemDisplay(item) }}
     </span>
   `,
   styles: [`
     .badge {
       margin-right: 5px;
-      padding: 5px;
+      padding: 10px;
+      font-size: larger;
       cursor: pointer;
     }
   `],

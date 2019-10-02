@@ -12,13 +12,13 @@ export class TimerService {
   }
 
   init() {
-    this.timerState = { timerValue:0 };
+    this.timerState = { timerValue: 0 };
   }
 
   startTimer() {
-    this.intervalHandle = setInterval(()=> {
+    this.intervalHandle = setInterval(() => {
       this.timerState.timerValue += 0.1;
-    }, 100)
+    }, 100);
   }
 
   stopTimer() {
@@ -28,6 +28,5 @@ export class TimerService {
   resetTimer() {
     this.timerState.timerValue = 0;
   }
-
 
 }
