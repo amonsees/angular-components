@@ -2,36 +2,38 @@
 <app-container>
   <div header>Edit Site</div>
   <div body>
-          
+
     <form (ngSubmit)="onSubmit()" [formGroup]="siteFormGroup" *ngIf="siteFormGroup">
       <div class="form-group">
         <label>Site Name</label>
         <input type="text" class="form-control" formControlName="name">
-        <div [hidden]="name.valid || (name.pristine && !name.touched)" class="alert alert-danger">Site Name is required</div>
+        <div [hidden]="name.valid || (name.pristine && !name.touched)" class="alert alert-danger">Site Name is required
+        </div>
       </div>
-      
+
       <div class="form-group">
         <label>Description</label>
         <input type="text" class="form-control" formControlName="description">
       </div>
-      
-      
+
       <div class="form-group">
         <label for="field2">Site Type</label>
-        <app-pill-list formControlName="siteType" [items]="siteTypes" class="form-control"></app-pill-list>
-        <div [hidden]="siteType.valid || (siteType.pristine && !siteType.touched)" class="alert alert-danger">Site Type is required</div>
+        <app-pill-list formControlName="siteType" [items]="siteTypes" class="form-control pill-height"></app-pill-list>
+        <div [hidden]="siteType.valid || (siteType.pristine && !siteType.touched)" class="alert alert-danger">Site Type
+          is required</div>
       </div>
-      
+
       <div class="form-group" *ngIf="siteType.value === 'Building'">
         <label>Height</label>
         <input type="number" class="form-control" formControlName="height">
       </div>
-      
+
       <div class="alert alert-danger" [hidden]="siteFormGroup.valid || !submitted">
-        Please fill in all required fields
+        Please fill in all required fields!
       </div>
 
-      <button type="submit" class="btn btn-success">Save</button><button class="btn btn-danger" (click)="closeAddEdit()">Cancel</button>
+      <button type="submit" class="btn btn-success">Save</button><button class="btn btn-danger"
+        (click)="closeAddEdit()">Cancel</button>
     </form>
 
   </div>

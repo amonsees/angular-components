@@ -6,6 +6,4 @@ import { ShapeBaseComponent } from '../base/shape-base.component';
   template: `<div class="square" [ngStyle]="style"></div>`,
   styleUrls: ['./square.component.scss']
 })
-export class SquareComponent extends ShapeBaseComponent {
-
-}
+export class SquareComponent extends ShapeBaseComponent {}

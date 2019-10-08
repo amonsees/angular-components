@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TimerService } from '../../services/timer.service';
 
 @Component({
@@ -16,8 +16,12 @@ import { TimerService } from '../../services/timer.service';
     TimerService
   ]
 })
-export class IndependantTimerControlsComponent {
+export class IndependantTimerControlsComponent implements OnDestroy {
 
   constructor(public timerService: TimerService) { }
 
+  ngOnDestroy(): void {
+    // Need to clean up the resources on the timer
+    this.timerService.destroy();
+  }
 }

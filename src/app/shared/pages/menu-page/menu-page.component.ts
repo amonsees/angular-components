@@ -4,7 +4,6 @@ import { ActivatedRouteSnapshot, ActivatedRoute, Route, RouterOutlet, Router } f
 @Component({
   selector: 'app-menu-page',
   templateUrl: './menu-page.component.html',
-  styleUrls: ['./menu-page.component.scss']
 })
 export class MenuPageComponent implements OnInit {
   routes: Route[];
@@ -31,13 +30,9 @@ export class MenuPageComponent implements OnInit {
       this.routes = this.router.config;
     }
 
-    this.routerOutlet.isActivated
-
     if (data) {
       this.display = this.route.routeConfig.data.display;
       this.description = this.route.routeConfig.data.description;
-    } else {
-      
     }
 
     this.currentUrl = this.buildCurrentUrl();
@@ -46,13 +41,13 @@ export class MenuPageComponent implements OnInit {
   /**
    * Builds a URL, but ignores route parameters
    */
-   private buildCurrentUrl() {
+  private buildCurrentUrl() {
     const urlParts: string[] = [];
 
     let currentRoute = this.route.snapshot;
 
-    while(currentRoute!=null) {
-      for(const urlPart of currentRoute.url) {
+    while (currentRoute != null) {
+      for (const urlPart of currentRoute.url) {
         urlParts.push(urlPart.toString());
       }
 

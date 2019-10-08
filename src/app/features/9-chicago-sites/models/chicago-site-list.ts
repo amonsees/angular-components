@@ -1,7 +1,7 @@
-import { SiteType } from "../models/site-type.enum";
-import { Site } from '../models/site.model';
+import { SiteType } from '../models/site-type.enum';
+import { Site } from './site.model';
 
-export const chicagoSiteList: Site[] = 
+export const chicagoSiteList: Site[] =
 [
     {
         id: 1,
@@ -40,7 +40,7 @@ export const chicagoSiteList: Site[] =
         name: 'Wrigley Building',
         siteType: SiteType.building,
         height: 425,
-        description: "Chicago's first air-conditioned office building",
+        description: `Chicago's first air-conditioned office building`,
     },
     {
         id: 7,

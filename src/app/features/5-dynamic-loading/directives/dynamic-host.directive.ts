@@ -4,6 +4,5 @@ import { Directive, ViewContainerRef } from '@angular/core';
     selector: '[appDynamicHost]'
 })
 export class DynamicHostDirective {
-    constructor(public viewContainerRef: ViewContainerRef) {
-    }
+    constructor(public viewContainerRef: ViewContainerRef) {}
 }

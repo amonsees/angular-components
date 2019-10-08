@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { DynamicLoadingFeatureRoutingModule } from './dynamic-loading-feature-routing.module';
+
 import { DnyamicLoadTestPageComponent } from './pages/dnyamic-load-test-page/dnyamic-load-test-page.component';
 import { DynamicLoaderComponent } from './components/dynamic-loader/dynamic-loader.component';
 import { DynamicHostDirective } from './directives/dynamic-host.directive';
+
 import { SquareComponent } from './components/shapes/square/square.component';
 import { CircleComponent } from './components/shapes/circle/circle.component';
 import { TriangleComponent } from './components/shapes/triangle/triangle.component';
-import { DynamicLoadingFeatureRoutingModule } from './dynamic-loading-feature-routing.module';
-import { SharedModule } from 'src/app/shared/shared.module';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,6 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     DynamicLoadingFeatureRoutingModule,
-    SharedModule,
     CommonModule,
     FormsModule
   ],
@@ -31,7 +33,7 @@ import { FormsModule } from '@angular/forms';
   entryComponents: [
     DnyamicLoadTestPageComponent,
 
-    // Dynamic components must be set a Entry components
+    // Dynamic components must be set as Entry components
     SquareComponent,
     CircleComponent,
     TriangleComponent,

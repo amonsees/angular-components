@@ -61,7 +61,7 @@ export class PillListComponent implements ControlValueAccessor {
     this.onChange(this.value);
   }
 
-  getItemDisplay(item:any) {
+  getItemDisplay(item: any) {
     if (item && this.displayField) {
       return item[this.displayField];
     }
@@ -69,7 +69,7 @@ export class PillListComponent implements ControlValueAccessor {
     return item;
   }
 
-  getItemValue(item:any) {
+  getItemValue(item: any) {
     if (item && this.valueField) {
       return item[this.valueField];
     }

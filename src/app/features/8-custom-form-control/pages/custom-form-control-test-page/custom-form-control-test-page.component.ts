@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 
     <app-pill-list [(ngModel)]="status" [items]="statusList"></app-pill-list>
 
-    value: {{status}}
+    <p>Value: {{status}}</p>
   `
 })
 export class CustomFormControlTestPageComponent {

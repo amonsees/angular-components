@@ -6,7 +6,6 @@ import {
 @Component({
   selector: 'app-life-cycle',
   templateUrl: './life-cycle.component.html',
-  styleUrls: ['./life-cycle.component.scss']
 })
 export class LifeCycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,
   AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
@@ -37,9 +36,11 @@ export class LifeCycleComponent implements OnInit, OnChanges, DoCheck, AfterCont
   ngAfterViewInit(): void {
     this.addEvent('ngAfterViewInit');
   }
+
   ngAfterContentChecked(): void {
     this.addEvent('ngAfterContentChecked');
   }
+
   ngAfterContentInit(): void {
     this.addEvent('ngAfterContentInit');
   }
@@ -62,6 +63,5 @@ export class LifeCycleComponent implements OnInit, OnChanges, DoCheck, AfterCont
 
   clearEvents() {
     this.events.length = 0;
-
   }
 }

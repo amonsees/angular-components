@@ -49,7 +49,5 @@ export class DnyamicLoadTestPageComponent {
     }
 
     this.componentInstance.color = this.selectedColor;
-
   }
-
 }

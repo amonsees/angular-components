@@ -24,6 +24,9 @@ export abstract class ShapeBaseComponent implements OnInit, OnChanges {
         }
     }
 
+    /**
+     * Setup share style
+     */
     protected setupStyle() {
         this.style = {
             backgroundColor: this.color,

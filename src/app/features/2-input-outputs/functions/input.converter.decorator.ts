@@ -1,5 +1,9 @@
 import { stringConverter, booleanConverter, intConverter } from './input-converters.function';
 
+/**
+ * Decorator to always convert the set value of a property to the correct type
+ * @param converter Convert to use (optional - will attempt to derive from property type)
+ */
 export function InputConverter(converter?: (value: any) => any) {
     return (target: Object, key: string) => {
         if (converter === undefined) {

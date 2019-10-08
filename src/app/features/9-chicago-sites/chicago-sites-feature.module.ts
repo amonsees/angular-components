@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { SharedModule } from 'src/app/shared/shared.module';
 
 import { ChicagoSitesPageComponent } from './pages/chicago-sites-page/chicago-sites-page.component';
 import { ChicagoSiteFeatureRoutingModule } from './chicago-sites-feature-routing.module';
+
 import { ChicagoSiteComponent } from './components/chicago-site/chicago-site.component';
 import { EditSiteComponent } from './pages/edit-site/edit-site.component';
 
-
-// We should never use any items from other feature modules
+// We should never use any item from other feature modules
 //   This is an example of what not to do and to show the error when loading this module if other modules have been loaded
 import { NumericDirective } from '../1-directives/directives/numeric.directive';
 import { ContainerComponent } from '../3-component-children/content-projection/components/container/container.component';

@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { chicagoSiteList } from 'src/app/shared/const/chicago-site-list';
-import { SiteService } from '../../services/site.service';
-import { Site } from 'src/app/shared/models/site.model';
-import { Observable } from 'rxjs';
 import { Router, ActivatedRoute, RouterOutlet } from '@angular/router';
+
+import { Observable } from 'rxjs';
+
+import { chicagoSiteList } from 'src/app/features/9-chicago-sites/models/chicago-site-list';
+import { Site } from 'src/app/features/9-chicago-sites/models/site.model';
+import { SiteService } from '../../services/site.service';
 
 @Component({
   selector: 'app-chicago-sites-page',
@@ -13,10 +15,10 @@ import { Router, ActivatedRoute, RouterOutlet } from '@angular/router';
 })
 export class ChicagoSitesPageComponent implements OnInit {
 
-  sites$ : Observable<Site[]>;
+  sites$: Observable<Site[]>;
 
   @ViewChild(RouterOutlet) routerOutlet: RouterOutlet;
-  
+
   constructor(private siteService: SiteService,
     private router: Router,
     private route: ActivatedRoute

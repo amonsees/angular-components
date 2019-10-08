@@ -6,6 +6,7 @@ import { SafeStyle, DomSanitizer } from '@angular/platform-browser';
 })
 export class NumericDirective {
   @Input() allowDecimal: boolean;
+  @Input() invalidStyle = 'border: 4px solid #dc3545;';
 
   @HostBinding('style')
   elementStyle: SafeStyle;
@@ -48,7 +49,7 @@ export class NumericDirective {
   private highlightElement() {
      // highlight the input border after invalid input
       if (!this.elementStyle) {
-        this.elementStyle = this.sanitizer.bypassSecurityTrustStyle('border: 4px solid #dc3545;');
+        this.elementStyle = this.sanitizer.bypassSecurityTrustStyle(this.invalidStyle);
 
         setTimeout(() => {
           this.elementStyle = null;

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SiteService } from '../../services/site.service';
-import { Site } from 'src/app/shared/models/site.model';
+import { Site } from 'src/app/features/9-chicago-sites/models/site.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { SiteType } from 'src/app/shared/models/site-type.enum';
+import { SiteType } from '../../models/site-type.enum';
 
 @Component({
   selector: 'app-edit-site',
@@ -16,14 +16,15 @@ export class EditSiteComponent implements OnInit {
 
   headerText: string;
   submitted = false;
-  
+
   site: Site;
 
   siteTypes = [
     SiteType.building,
     SiteType.museum,
     SiteType.park,
-    SiteType.stadium
+    SiteType.stadium,
+    SiteType.other
   ];
 
   get name() {
@@ -54,13 +55,13 @@ export class EditSiteComponent implements OnInit {
   setupSite() {
     this.route.paramMap
       .subscribe(params => {
-        // Get the Site Id from the form parameters
-        this.siteId = parseInt(params.get("id"), 10);
+        // Get the Site Id from the route parameters
+        this.siteId = parseInt(params.get('id'), 10);
 
         if (!this.siteId) {
-          this.headerText = "Add Site";
+          this.headerText = 'Add Site';
         } else {
-          this.headerText = "Edit Site";
+          this.headerText = 'Edit Site';
 
           // Retrieve the site from the site service
           this.siteService.getSite(this.siteId)
@@ -77,13 +78,16 @@ export class EditSiteComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
 
+    // Ensure the form is valid before continuing
     if (!this.siteFormGroup.valid) {
       return;
     }
-    // Save site
+
+    // Merge initial site with the form version - this keeps the id which wan't on the form
     const finalSite = { ...this.site, ...this.siteFormGroup.value };
 
-    this.siteService.addEditSite(finalSite);
+    // Save site
+    this.siteService.addOrUpdateSite(finalSite);
 
     this.closeAddEdit();
   }

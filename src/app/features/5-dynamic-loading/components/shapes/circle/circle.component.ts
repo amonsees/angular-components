@@ -13,6 +13,7 @@ export class CircleComponent extends ShapeBaseComponent implements OnInit {
    }
 
   ngOnInit() {
+    // Always remeber to call super when overriding methods
     super.ngOnInit();
   }
 

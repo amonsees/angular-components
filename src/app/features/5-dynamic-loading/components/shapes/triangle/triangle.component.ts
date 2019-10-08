@@ -9,7 +9,10 @@ import { ShapeBaseComponent } from '../base/shape-base.component';
 export class TriangleComponent extends ShapeBaseComponent {
 
 
-  setupStyle() {
+  /**
+   * Override the style
+   */
+  protected setupStyle() {
     this.style = {
       borderBottomColor: this.color
     };

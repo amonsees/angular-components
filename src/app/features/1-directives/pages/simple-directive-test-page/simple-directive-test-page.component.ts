@@ -8,5 +8,5 @@ import { Component, OnInit } from '@angular/core';
     <div appSimpleDirective>Sample Text</div>
   `
 })
-export class SimpleDirectiveTestPageComponent{
+export class SimpleDirectiveTestPageComponent {
 }

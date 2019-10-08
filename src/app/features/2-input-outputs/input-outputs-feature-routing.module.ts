@@ -1,6 +1,7 @@
 // tslint:disable:max-line-length
 import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
+
 import { InputTestPageComponent } from './pages/input-test-page/input-test-page.component';
 import { OutputTestPageComponent } from './pages/output-test-page/output-test-page.component';
 import { TwoWayBindingTestPageComponent } from './pages/two-way-binding-test-page/two-way-binding-test-page.component';

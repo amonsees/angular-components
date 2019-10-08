@@ -8,12 +8,12 @@ export class SimpleDirective {
 
   constructor(private elementRef: ElementRef) {}
 
-  @HostListener('mouseenter') 
+  @HostListener('mouseenter')
   onMouseEnter() {
     this.setBackgroundColor(this.color);
   }
 
-  @HostListener('mouseleave') 
+  @HostListener('mouseleave')
   onMouseLeave() {
     this.setBackgroundColor(null);
   }

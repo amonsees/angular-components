@@ -1,10 +1,12 @@
 import { RouterModule, Route } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { MenuPageComponent } from 'src/app/shared/pages/menu-page/menu-page.component';
+
 import { TemplateFormTestPageComponent } from './template-forms/pages/template-form-test-page/template-form-test-page.component';
 import { ReactiveSimpleFormTestPageComponent } from './reactive-forms/pages/reactive-simple-form-test-page/reactive-simple-form-test-page.component';
 import { ReactiveFormTestPageComponent } from './reactive-forms/pages/reactive-form-test-page/reactive-form-test-page.component';
 import { TemplateSimpleFormTestPageComponent } from './template-forms/pages/template-simple-form-test-page/template-simple-form-test-page.component';
+
+import { MenuPageComponent } from 'src/app/shared/pages/menu-page/menu-page.component';
 
 const featureRoutes: Route[] = [
     {

@@ -1,4 +1,8 @@
 
+/**
+ * Converts any vaule to a string
+ * @param value value
+ */
 export function stringConverter(value: any): string {
     if (value === null || value === undefined || typeof value === 'string') {
         return value;
@@ -7,6 +11,10 @@ export function stringConverter(value: any): string {
     return value.toString();
 }
 
+/**
+ * Converts any vaue to a boolean
+ * @param value value
+ */
 export function booleanConverter(value: any): boolean {
     if (value === null || value === undefined || typeof value === 'boolean') {
         return value;
@@ -15,7 +23,11 @@ export function booleanConverter(value: any): boolean {
     return value.toString() === 'true';
 }
 
-
+/**
+ * Converts any value to a float
+ * @param value value
+ * @param returnNullOnNan if the number is not invalid, return as null?
+ */
 export function floatConverter(value: any, returnNullOnNan: boolean = true): number {
     if (value === null || value === undefined || typeof value === 'boolean') {
         return value;
@@ -30,7 +42,11 @@ export function floatConverter(value: any, returnNullOnNan: boolean = true): num
     return floatValue;
 }
 
-
+/**
+ * Convert a value to an int
+ * @param value value
+ * @param returnNullOnNan if the number is not invalid, return as null?
+ */
 export function intConverter(value: any, returnNullOnNan: boolean = true): number {
     if (value === null || value === undefined || typeof value === 'boolean') {
         return value;
@@ -44,4 +60,3 @@ export function intConverter(value: any, returnNullOnNan: boolean = true): numbe
 
     return intValue;
 }
-
