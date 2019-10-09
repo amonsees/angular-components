@@ -42,7 +42,7 @@ const routes: Routes =
     path : 'life-cycle',
     loadChildren: () => import('./features/6-component-life-cycle/component-life-cycle-feature.module').then(mod => mod.ComponentLifeCycleFeatureModule),
     data: {
-      display: 'Life Cycle',
+      display: 'Component Life Cycle',
     }
   },
   {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-timer',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       Timer: {{ timerValue | number : '1.1-1' }}
     </div>`
 })
-export class TimerComponent {
+export class TimerComponent implements OnDestroy {
   timerValue = 0;
 
   private interval: any;
@@ -26,4 +26,7 @@ export class TimerComponent {
     this.timerValue = 0;
   }
 
+  ngOnDestroy(): void {
+    this.stop();
+  }
 }
